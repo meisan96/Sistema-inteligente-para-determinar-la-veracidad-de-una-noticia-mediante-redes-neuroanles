@@ -1,0 +1,85 @@
+    {% extends "layout.html" %}
+
+{% block content %}
+    {% if datos.pred1 != 0 %}
+    <div class="jumbotron" style="padding-top:20px;">
+        <h1> Noticia buscada: {{ datos.texto }}</h1>
+        <p class="lead">La veracidad de la noticia.</p>
+    </div>
+    <div class="row mb-2" id="div-c">
+        <div style="width:{{ datos.pred1 }}%; background-color:red;">{{ datos.pred1 }}</div>
+        <div style="width:{{ datos.pred2 }}%; background-color:green;">{{ datos.pred2 }}</div>
+    </div>
+    <div class="jumbotron" style="padding-top:20px;">
+        <p class="lead">La noticia referente a la busqueda.</p>
+    </div>
+    <div class="card text-primary" id="div-c">
+        <!--<img src="..." class="card-img-top" alt="...">-->
+        <a href="{{ datos.link }}" class="list-group-item list-group-item-action" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 text-center" style="color: black;">{{ datos.titulo }}</h5>
+                <small>{{ datos.fecha }}</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small>{{ datos.link }}</small>
+        </a>
+    </div>
+    <hr />
+    {% endif %}
+    <div class="jumbotron" style="padding-top:20px;">
+        <p class="lead">Historial de Busquedas Recientes.</p>
+    </div>
+    <div class="list-group">
+        {% if datos.his >= 1 %}
+        <a href="{{ datos.hn11 }}" class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ datos.hn12 }}</h5>
+                <small>{{ datos.fecha }}</small>
+            </div>
+            <p class="mb-1 text-lg-start">Some placeholder content in a paragraph.</p>
+            <small>{{ datos.hn11 }}</small>
+        </a>
+        {% endif %}
+        {% if datos.his >= 2 %}
+        <a href="{{ datos.hn21 }}" class="list-group-item list-group-item-action" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ datos.hn22 }}</h5>
+                <small>{{ datos.fecha }}</small>
+            </div>
+            <p class="mb-1 text-lg-start ">Some placeholder content in a paragraph.</p>
+            <small>{{ datos.hn21 }}</small>
+        </a>
+        {% endif %}
+        {% if datos.his >= 3 %}
+        <a href="{{ datos.hn31 }}" class="list-group-item list-group-item-action" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ datos.hn32 }}</h5>
+                <small>{{ datos.fecha }}</small>
+            </div>
+            <p class="mb-1 text-lg-start">Some placeholder content in a paragraph.</p>
+            <small>{{ datos.hn31 }}</small>
+        </a>
+        {% endif %}
+        {% if datos.his >= 4 %}
+        <a href="{{ datos.hn41 }}" class="list-group-item list-group-item-action" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ datos.hn42 }}</h5>
+                <small>{{ datos.fecha }}</small>
+            </div>
+            <p class="mb-1 text-lg-start">Some placeholder content in a paragraph.</p>
+            <small>{{ datos.hn41 }}</small>
+        </a>
+        {% endif %}
+        {% if datos.his >= 5 %}
+        <a href="{{ datos.hn51 }}" class="list-group-item list-group-item-action" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ datos.hn52 }}</h5>
+                <small>{{ datos.fecha }}</small>
+            </div>
+            <p class="mb-1 text-lg-start">Some placeholder content in a paragraph.</p>
+            <small>{{ datos.hn51 }}</small>
+        </a>
+        {% endif %}
+    </div>
+    
+{% endblock %}
