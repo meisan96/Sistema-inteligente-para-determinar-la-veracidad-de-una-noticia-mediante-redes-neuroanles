@@ -1,1 +1,1 @@
-# Sistema-inteligente-para-determinar-la-veracidad-de-una-noticia-mediante-redes-neuroanles
+# SISTEMA INTELIGENTE PARA DETERMINAR LA VERACIDAD DE UNA NOTICIA MEDIANTE REDES NEURONALES
